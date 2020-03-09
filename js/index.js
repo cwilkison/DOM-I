@@ -59,12 +59,16 @@ navLinksC.forEach(element => {
 const newLink = document.createElement("navLinks");
 newLink.textContent = "Wilkison";
 const parentElement = document.querySelector('nav');
-parentElement.append(newLink);
+parentElement.appendChild(newLink);
+newLink.style.color = "green"
+
+
 
 const newLinkTwo = document.createElement("navLinks");
 newLinkTwo.textContent = "Lambda";
 const parentElementTwo = document.querySelector('nav');
 parentElementTwo.prepend(newLinkTwo);
+newLinkTwo.style.color = "green"
 
 
 // CTA
@@ -72,8 +76,14 @@ parentElementTwo.prepend(newLinkTwo);
 const ctaH1 = document.querySelector('.cta-text h1')
 ctaH1.textContent = "Dom Is Awesome";
 
+document.querySelector('.cta-text h1').innerHTML = siteContent.cta.h1.split(" ").join("<br> ");
+
 const ctaButton = document.querySelector('.cta-text button')
 ctaButton.textContent = 'Get Started'
+
+function mouseOut(){
+  document.getElemnentById("button").style.backgroundColor = "red";
+}
 
 const ctaimg = document.getElementById("cta-img")
 ctaimg.setAttribute('src', 'img/header-img.png')
@@ -119,7 +129,7 @@ visionContentP.textContent = 'Vision content elementum magna eros, ac posuere el
 const contactHead = document.querySelector('.contact h4')
 contactHead.textContent = 'Contact'
 const contactAddress = document.querySelector('.contact p')
-contactAddress.textContent = '123 Way 456 Street Somewhere, USA'
+contactAddress.textContent = '123 Way 456 Street \r\n Somewhere, USA'
 const contactPhone = document.querySelector('.contact p:nth-of-type(2)')
 contactPhone.textContent = "1 (888) 888-8888"
 const contactEmail = document.querySelector('.contact p:nth-of-type(3)')
