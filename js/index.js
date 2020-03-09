@@ -40,3 +40,93 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Nav Anchors
+
+const navLinks = document.getElementsByTagName('a');
+navLinks[0].textContent = "Services"
+navLinks[1].textContent = "Product"
+navLinks[2].textContent = "Vision"
+navLinks[3].textContent = "Features"
+navLinks[4].textContent = "About"
+navLinks[5].textContent = "Contact"
+
+const navLinksC = document.querySelectorAll('a')
+navLinksC.forEach(element => {
+  element.style.color = "green";
+})
+
+const newLink = document.createElement("navLinks");
+newLink.textContent = "Wilkison";
+const parentElement = document.querySelector('nav');
+parentElement.append(newLink);
+
+const newLinkTwo = document.createElement("navLinks");
+newLinkTwo.textContent = "Lambda";
+const parentElementTwo = document.querySelector('nav');
+parentElementTwo.prepend(newLinkTwo);
+
+
+// CTA
+
+const ctaH1 = document.querySelector('.cta-text h1')
+ctaH1.textContent = "Dom Is Awesome";
+
+const ctaButton = document.querySelector('.cta-text button')
+ctaButton.textContent = 'Get Started'
+
+const ctaimg = document.getElementById("cta-img")
+ctaimg.setAttribute('src', 'img/header-img.png')
+
+// Upper Content
+
+const featuresContent = document.querySelector('.text-content h4')
+featuresContent.textContent = 'Features'
+const featuresContentP = document.querySelector('.text-content p')
+featuresContentP.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+const aboutContent = document.querySelector('.text-content:nth-of-type(2) h4')
+aboutContent.textContent = 'About'
+const aboutContentP = document.querySelector('.text-content:nth-of-type(2) p')
+aboutContentP.textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+
+// Middle Image
+
+const midimg = document.getElementById("middle-img")
+midimg.setAttribute('src', 'img/mid-page-accent.jpg')
+
+// Bottom Content
+
+const servicesContent = document.querySelector('.bottom-content .text-content h4')
+servicesContent.textContent = 'Services'
+const servicesContentP = document.querySelector('.bottom-content .text-content p')
+servicesContentP.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+const productContent = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4')
+productContent.textContent = 'Product'
+const productContentP = document.querySelector('.bottom-content .text-content:nth-of-type(2) p')
+productContentP.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+const visionContent = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4')
+visionContent.textContent = 'Vision'
+const visionContentP = document.querySelector('.bottom-content .text-content:nth-of-type(3) p')
+visionContentP.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+
+//Contact
+
+const contactHead = document.querySelector('.contact h4')
+contactHead.textContent = 'Contact'
+const contactAddress = document.querySelector('.contact p')
+contactAddress.textContent = '123 Way 456 Street Somewhere, USA'
+const contactPhone = document.querySelector('.contact p:nth-of-type(2)')
+contactPhone.textContent = "1 (888) 888-8888"
+const contactEmail = document.querySelector('.contact p:nth-of-type(3)')
+contactEmail.textContent = "sales@greatidea.io"
+
+
+// Footer
+
+const footerInfo = document.querySelector('footer p')
+footerInfo.textContent = 'Copyright Great Idea! 2018'
